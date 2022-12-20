@@ -252,6 +252,7 @@ input[type="search"] {
 
 .board__more{
   padding-top: var(--spacing-sm);
+  background-color: orange;
 }
 
 
@@ -384,6 +385,19 @@ input[type="search"] {
       "board"
       "favorite"
       "twitter";
+  }
+
+  /* 모바일 인기 사이트 */ 
+  .favorite__item{
+    margin-top: var(--spacing-sm);
+  }
+
+  .favorite__link::after{
+    content: attr(data-tooltip);
+    /* background-color: pink; */
+    color: var(--accent-favorite);
+    font-size: var(--text-sm);
+    margin-left: var(--spacing-xs);
   }
 }
 

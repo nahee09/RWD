@@ -45,7 +45,7 @@ video{
   /* width: 100%; 
   height: 0;
   padding-top: 56.25%; */
-  position: relative;
+  /* position: relative; */
 
 }
 
@@ -78,7 +78,8 @@ video{
 .iframeWrapper iframe{
   width: 100%;
   height: 100%;
-  position: absolute;
+  /* position: absolute;
   top: 0; 
-  left: 0;
+  left: 0; */
+  display:block;
 }

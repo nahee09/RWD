@@ -98,48 +98,44 @@ input[type="search"] {
   font-weight: 700;
 }
 
-/* 공통 메인 콘텐츠 */ 
-.appMain{
-  display: grid; 
-  padding: var(--spacing-base) var(--spacing-lg);
+/* 공통 메인 콘텐츠 */
+.appMain {
+  display: grid;
   gap: var(--spacing-base);
+  padding: var(--spacing-base) var(--spacing-lg);
 }
 
-/* 공통 메인 콘텐츠 섹션 제목 */ 
-[class*="__title"]{
+/* 공통 메인 콘텐츠 섹션 제목 */
+.appMain [class*="__title"]{
   margin-bottom: var(--spacing-base);
-  display: flex; 
+  display: flex;
   flex-flow: column nowrap;
   justify-content: center;
 }
 
-[class*="__koTitle"]{
-  font-weight: 700;
+.appMain [class*="__koTitle"]{
   font-size: var(--text-md);
+  font-weight: 700;
 }
 
 .sprite{
+  background: url("./../images/sprite_main.png") no-repeat;
   height: 3.75rem;
-  background: url("../images/sprite_main.png") no-repeat;
   padding-left: 4rem;
 }
 
 .spriteBook{
-  background-position: 0 0px;
+  background-position: 0 0;
 }
-
 .spriteNews{
   background-position: 0 -230px;
 }
-
 .spriteBoard{
   background-position: 0 -115px;
 }
-
 .spriteFavorite{
   background-position: 0 -345px;
 }
-
 .spriteTwitter{
   background-position: 0 -460px;
 }
@@ -147,43 +143,38 @@ input[type="search"] {
 .accentBook{
   color: var(--accent-book);
 }
-
 .accentNews{
   color: var(--accent-news);
 }
-
-.accentFavorite{
-  color: var(--accent-favorite);
-}
-
 .accentBoard{
   color: var(--accent-board);
 }
-
+.accentFavorite{
+  color: var(--accent-favorite);
+}
 .accentTwitter{
   color: var(--accent-twitter);
 }
 
 /* 공통 메인 콘텐츠 섹션 본문 */
 .appMain [class*="__summary"] {
-  line-height: 1.6; /*160%와는 다름*/
+  line-height: 1.6;
   margin-top: var(--spacing-base);
 }
 
-/* 공통 추천 서적 */ 
-.book{
-  /* background-color: lightgreen; */
-  /* grid-column: 1/5;
-  grid-row: 2/4; */
+/* 공통 추천 서적 */
+.book {
   grid-area: book;
 }
 
 .book__cover{
-  /* background-color: yellow; */
-  text-align: center;
-  width: 80%; /*이미지가 줄어드는 게 아니라 figure가 줄어든 것*/ 
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  /* display: flex;
+  flex-flow: column nowrap;
+  align-items: center; */
 }
 
 .book__coverCaption{
@@ -192,11 +183,9 @@ input[type="search"] {
 }
 
 .book__info{
-  /* background-color: pink; */
   text-align: center;
   margin-top: var(--spacing-base);
 }
-
 .book__info *{
   display: inline;
 }
@@ -206,88 +195,75 @@ input[type="search"] {
   font-size: var(--text-xl);
 }
 
-/* 공통 새소식 */ 
-.news{
-  /* background-color: lightgreen; */
-  /* grid-column: 1/13;
-  grid-row: 1/2; */
+/* 공통 새소식 */
+.news {
   grid-area: news;
 }
 
 .news__date{
-  /* background-color: skyblue; */
-  margin-top: var(--spacing-base);
   display: block;
+  margin-top: var(--spacing-base);
   text-align: right;
 }
 
-
-
-/* 공통 게시판 */ 
-.board{
-  background-color: yellow;
-  /* grid-column: 6/13;
-  grid-row: 3/4; */
+/* 공통 게시판 */
+.board {
   grid-area: board;
+  background-color: yellow;
   display: flex;
   flex-flow: row wrap;
+  overflow: hidden;
 }
 
 .board__title{
-  background-color: pink;
-  flex: 1 1 auto; /* grow shrink basis */
+  flex: 1 1 auto;
+  
 }
 
 .board__list{
-  background-color: skyblue;
   order: 1;
-  flex: 1 1 auto;
+  flex:1 1 auto;
   display: flex;
   flex-flow: column nowrap;
   gap: var(--spacing-sm);
+  width: 100%;
 }
 
 .board__item{
-  background-color: lightgreen;
-  display:flex;
+  display: flex;
   flex-flow: row nowrap;
 }
 
 .board__link{
-  background-color:blueviolet;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  background-color: pink;
   width: calc(100% - 6rem);
 }
 
 .board__date{
-  background-color: orange;
   flex: 0 0 auto;
+  background-color: skyblue;
   width: 6.25rem;
+  text-align: right;
 }
 
 .board__more{
-  background-color: orangered;
   padding-top: var(--spacing-sm);
 }
 
 
-
-/* 공통 인기 사이트 */ 
-.favorite{
-  /* background-color: lightsalmon; */
-  /* grid-column: -1/-4;
-  grid-row: 2/3; */
+/* 공통 인기 사이트 */
+.favorite {
+  /* background: skyblue; */
   grid-area: favorite;
 }
 
-/* 공통 트위터 */ 
-.twitter{
-  /* background-color: skyblue; */
-  /* grid-column: 5/10;
-  grid-row: 2/3; */
+/* 공통 트위터 */
+.twitter {
+  /* background: burlywood; */
   grid-area: twitter;
 }
 
@@ -383,6 +359,7 @@ input[type="search"] {
     backdrop-filter: blur(4px);
     padding: var(--spacing-lg);
     transform: translateX(-150%);
+    /* transition: all 600ms; */
   }
 
   .menu__item {
@@ -397,8 +374,8 @@ input[type="search"] {
     transform: none;
   }
 
-  /* 모바일 메인 콘텐츠 */ 
-  .appMain{
+  /* 모바일 메인 콘텐츠 */
+  .appMain {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
@@ -409,8 +386,6 @@ input[type="search"] {
       "twitter";
   }
 }
-
-
 
 /* 데스크탑 디바이스 (Desktop Device) */
 @media (min-width: 769px) {
@@ -462,23 +437,20 @@ input[type="search"] {
     padding: var(--spacing-md) var(--spacing-lg);
     color: var(--white);
     font-size: 1.2rem;
-    font-weight: 700;
     text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
   }
 
   /* 데스크탑 메인 콘텐츠 */
-  .appMain{
+  .appMain {
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas:
-      "news news news news news news news news news news news news"
-      "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
-      "book book book book . board board board board board board board";
-  }
+    grid-template-rows: auto;
+    grid-template-areas: "news news news news news news news news news news news news"
+                         "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
+                         "book book book book . board board board board board board board";
 }
-
 
 /* 고해상도 배경이미지 미디어쿼리 */
 @media (-webkit-min-device-pixel-ratio: 2),

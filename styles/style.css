@@ -173,8 +173,8 @@ input[type="search"] {
 /* 공통 추천 서적 */ 
 .book{
   /* background-color: lightgreen; */
-  grid-column: 1/5;
-  grid-row: 2/4;
+  /* grid-column: 1/5;
+  grid-row: 2/4; */
   grid-area: book;
 }
 
@@ -209,8 +209,8 @@ input[type="search"] {
 /* 공통 새소식 */ 
 .news{
   /* background-color: lightgreen; */
-  grid-column: 1/13;
-  grid-row: 1/2;
+  /* grid-column: 1/13;
+  grid-row: 1/2; */
   grid-area: news;
 }
 
@@ -225,25 +225,69 @@ input[type="search"] {
 
 /* 공통 게시판 */ 
 .board{
-  /* background-color: yellow; */
-  grid-column: 6/13;
-  grid-row: 3/4;
+  background-color: yellow;
+  /* grid-column: 6/13;
+  grid-row: 3/4; */
   grid-area: board;
+  display: flex;
+  flex-flow: row wrap;
 }
+
+.board__title{
+  background-color: pink;
+  flex: 1 1 auto; /* grow shrink basis */
+}
+
+.board__list{
+  background-color: skyblue;
+  order: 1;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-sm);
+}
+
+.board__item{
+  background-color: lightgreen;
+  display:flex;
+  flex-flow: row nowrap;
+}
+
+.board__link{
+  background-color:blueviolet;
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 6rem);
+}
+
+.board__date{
+  background-color: orange;
+  flex: 0 0 auto;
+  width: 6.25rem;
+}
+
+.board__more{
+  background-color: orangered;
+  padding-top: var(--spacing-sm);
+}
+
+
 
 /* 공통 인기 사이트 */ 
 .favorite{
   /* background-color: lightsalmon; */
-  grid-column: -1/-4;
-  grid-row: 2/3;
+  /* grid-column: -1/-4;
+  grid-row: 2/3; */
   grid-area: favorite;
 }
 
 /* 공통 트위터 */ 
 .twitter{
   /* background-color: skyblue; */
-  grid-column: 5/10;
-  grid-row: 2/3;
+  /* grid-column: 5/10;
+  grid-row: 2/3; */
   grid-area: twitter;
 }
 

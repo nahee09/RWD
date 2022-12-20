@@ -28,7 +28,20 @@ img {
   height: auto;
 }
 
-video {
+video{
   width: 100%;
   height: auto;
+}
+
+/*가로가 100%일 때 세로는 56.25% */
+
+/* 반응형 iframe */
+.iframeWrapper{
+  background-color: blueviolet;
+}
+
+
+.iframeWrapper iframe{
+  width: 100%;
+  height: 56.25%;
 }

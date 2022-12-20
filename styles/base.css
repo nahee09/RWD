@@ -36,12 +36,36 @@ video{
 /*가로가 100%일 때 세로는 56.25% */
 
 /* 반응형 iframe */
-.iframeWrapper{
-  background-color: blueviolet;
+.news__videoController{
+  width: auto;
 }
 
+.iframeWrapper{
+  background-color: blueviolet;
+  width: 100%; 
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframeRatio-16-9 {
+  padding-top: 56.25%;
+}
+.iframeRatio-21-9 {
+  padding-top: 42.857142857142855%;
+}
+.iframeRatio-4-3 {
+  padding-top: 75%;
+}
+
+.iframeRatio-1-1{
+  padding-top: 100%;
+}
 
 .iframeWrapper iframe{
   width: 100%;
-  height: 56.25%;
+  height: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0;
 }

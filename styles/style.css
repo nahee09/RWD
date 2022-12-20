@@ -268,6 +268,41 @@ input[type="search"] {
   grid-area: twitter;
 }
 
+.twitter__userInfo{
+  /* background-color: skyblue; */
+  display: inline-flex;
+  gap: var(--spacing-xs);
+}
+
+.twitter__userProfile{
+  /* background-color: lightgreen; */
+  /* width: 80px;
+  height: 80px; */
+  width: 25%;
+  min-width: 3.125rem;
+  max-width: 5.625rem;
+  aspect-ratio: 1/1;
+  margin-left: var(--spacing-xs);
+  float: right;
+  shape-outside: circle(50%);
+}
+
+.twitter__userProfileImage{
+  border-radius: 50%;
+  border: 1px solid black;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: 30% 40%;
+}
+
+
+.twitter__date{
+  /* background-color: tomato; */
+  display: block;
+  margin-top: var(--spacing-xs);
+}
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
   /* 모바일 헤더 */
